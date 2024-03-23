@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "parcel build src/index.html --dist-dir dist --public-url ./",
+    "test": "jest",
+    "lint": "eslint",
+    "check": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@parcel/config-default": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-typescript-tsc": "^2.12.0",
+    "@types/events": "^3.0.3",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "bootstrap": "^5.3.3",
+    "events": "^3.3.0",
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.3",
+    "zustand": "^4.5.2"
+  }
+}

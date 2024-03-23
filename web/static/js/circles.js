@@ -15,8 +15,13 @@ export default {
     color: "rgb(255, 255, 204)",
     trailColor: "rgb(35, 35, 35)",
     strokeWidth: 13,
-    trailWidth: 13,
-    duration: 600,
+    _duration: 600,
+    get duration() {
+      return this._duration;
+    },
+    set duration(value) {
+      this._duration = value;
+    },
   }),
   HungerIndicator: new ProgressBar.Circle("#HungerIndicator", {
     color: "rgb(255, 164, 59)",

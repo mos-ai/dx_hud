@@ -1,0 +1,163 @@
+
+$colour-black: #000000;
+$colour-white: #ffffff;
+$colour-gray: #aaaaaa;
+$colour-red: #ff2e63;
+$colour-blue: #0074d9;
+$colour-green: #2ecc40;
+$colour-yellow: #ffdc00;
+$colour-orange: #ff851b;
+$colour-purple: #b10dc9;
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./colours.scss";
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+
+
+body,
+html {
+  background-color: transparent;
+  font-family: "Silkscreen", "Courier New", Courier, monospace;
+}
+
+@mixin counter-display {
+  display: block;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@mixin blink {
+  transition: opacity 0.5s ease-in-out;
+  animation: blink 1s linear infinite;
+}
+
+.top-left-bar {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.bottom-bar {
+  padding: 10px;
+}
+
+.bar-display {
+  .label {
+    width: 30px;
+  }
+  .value {
+    width: 40px;
+    text-align: center;
+  }
+  .bar-bg {
+    display: block;
+    background-color: rgba(255, 255, 255, 15);
+    width: 100%;
+  }
+  .bar {
+    height: 3px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .value {
+    transition: all 0.5s ease-in-out;
+    &.colour-red {
+      @include blink;
+    }
+  }
+}
+
+
+
+
+.no-gutters {
+  padding-left: 0;
+  padding-right: 0;
+  > .row {
+    margin-right: 0;
+    margin-left: 0;
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  
+}
+
+.mini-bar {
+  background-color: rgba(1, 56, 175, 0.5);
+  .icon  {
+    width: 20px;
+    text-align: center;
+    &.bg-red {
+      @include blink;
+    }
+    > i {
+      font-size: 12px;
+    }
+  }
+  .bar {
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    height: 12px;
+    padding: 0px;
+    background-color: $colour-black;
+    position: relative;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 1);
+    .label {
+      margin-top: -2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+    .bar-inner {
+      height: 12px;
+      &.bg-red {
+        @include blink;
+      }
+    }
+  }
+}
+.minibars {
+  margin-left: 15px;
+}
+.character {
+  padding-left: 20px;
+  width: 100%;
+}
+.seatbelt {
+  > svg {
+    width: 20px;
+    height: 20px;
+  }
+  &.active {
+    > svg {
+      fill: $colour-green;
+    }
+  }
+  &.inactive {
+    > svg  {
+      @include blink;
+      fill: $colour-red;
+    }
+    
+  }
+}

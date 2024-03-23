@@ -35,9 +35,10 @@ server_scripts {
 	'server/seatbelt.lua'
 }
 
-ui_page 'web/index.html'
+ui_page 'web/dist/index.html'
 
 files {
-	'web/index.html',
-	'web/**/*'
+	'web/dist/index.html',
+	'web/dist/**/*',
+	'web/assets/**/*',
 }

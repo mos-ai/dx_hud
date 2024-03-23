@@ -22,6 +22,14 @@ if GetResourceState('ox_core'):find('start') then
 	AddEventHandler('ox:statusTick', function(values)
 		SendMessage('status', values)
 	end)
+
+end
+
+if GetResourceState('seatbelt'):find('start') then
+	RegisterNetEvent('seatbelt:stateChange')
+	AddEventHandler('seatbelt:stateChange', function(state) 
+		SendMessage('setSeatbelt', state)
+	end)
 end
 
 if GetResourceState('es_extended'):find('start') then

@@ -31,6 +31,8 @@ window.onload = (event) => {
   const Seatbelt = document.getElementById("SeatbeltIcon");
   const Buckle = document.getElementById("buckle");
   const Unbuckle = document.getElementById("unbuckle");
+  const cash = document.getElementById("cash");
+  const coords = document.getElementById("coords");
 
   Circle.VoiceIndicator.animate(0.66);
 
@@ -41,10 +43,17 @@ window.onload = (event) => {
     if (action == "toggleHud") {
       Container.style.display = data ? "flex" : "none";
     }
+    // if(action == "cash") {
+    //   cash.innerText = event.data.action;
+    // }
+    if(action == "coords") {
+      coords.innerText = JSON.stringify(event.data);
 
-    if (action == "setLogo") {
-      Logo.style.display = "block";
     }
+
+    // if (action == "setLogo") {
+    //   Logo.style.display = "block";
+    // }
 
     if (action == "setPlayerId") {
       if (data) {

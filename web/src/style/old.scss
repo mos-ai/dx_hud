@@ -1,0 +1,156 @@
+
+// $element-size: 0.20em;
+// $spacing: 0.00em;
+// $char-spacing: 0.02em;
+
+// $element-outer-size: $element-size + ($spacing * 2);
+
+// $element-height: $element-size + ($spacing * 2);
+// $element-width: $element-size + ($spacing * 2);
+
+// $line-height: ($element-size + ($spacing * 2)) * 5;
+// $line-width: ($element-size + ($spacing * 2)) * 3;
+
+// .counter {
+//   display: inline-block;
+//   line-height: $line-height;
+//   height: $line-height;
+//   width: $line-width;
+//   margin-left: $char-spacing;
+//   margin-right: $char-spacing;
+//   position: relative;
+  
+//   // background-color: rgba(0,0,0,1);
+//   > div {
+//     position: absolute;
+//     height: $element-size;
+//     width: $element-size;
+//     padding: 0px;
+//     margin: 0px;
+//     display: none;
+//     background-color: #08d9d6;
+//     // border: 1px solid #000;
+//   }
+//   &.red > div {
+//     background-color: $colour-red;
+//   }
+//   &.blue > div {
+//     background-color: $colour-blue;
+//   }
+//   &.green > div {
+//     background-color: $colour-green;
+//   }
+//   &.yellow > div {
+//     background-color: $colour-yellow;
+//   }
+//   &.orange > div {
+//     background-color: $colour-orange;
+//   }
+//   &.purple > div {
+//     background-color: $colour-purple;
+//   }
+//   &.white > div {
+//     background-color: $colour-white;
+//   }
+//   &.black > div {
+//     background-color: $colour-black;
+//   }
+//   &.gray > div {
+//     background-color: $colour-gray;
+//   }
+
+//   .y1 {
+//     left: $spacing;
+//   }
+//   .y2 {
+//     left: $element-outer-size;
+//   }
+//   .y3 {
+//     left: $element-outer-size * 2;
+//   }
+//   .x1 {
+//     top: $spacing;
+//   }
+//   .x2 {
+//     top: $element-outer-size;
+//   }
+//   .x3 {
+//     top: $element-outer-size * 2;
+//   }
+//   .x4 {
+//     top: $element-outer-size * 3;
+//   }
+//   .x5 {
+//     top: $element-outer-size * 4;
+//   }
+//   &.v0 {
+//     .b11, .b12, .b13, 
+//     .b21, .b23,
+//     .b31, .b33, 
+//     .b41, .b43,
+//     .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v1 {
+//     .b12, .b22, .b32, .b42, .b52 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v2 {
+//     .b11, .b12, .b13, .b23, .b31, .b32, .b33, .b41, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v3 {
+//     .b11, .b12, .b13, .b23, .b31, .b32, .b33, .b43, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v4 {
+//     .b11, .b13, .b21, .b23, .b31, .b32, .b33, .b43, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v5 {
+//     .b11, .b12, .b13, .b21, .b31, .b32, .b33, .b43, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v6 {
+//     .b11, .b12, .b13, .b21, .b31, .b32, .b33, .b41, .b43, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v7 {
+//     .b11, .b12, .b13, .b23, .b33, .b43, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v8 {
+//     .b11, .b12, .b13, .b21, .b23, .b31, .b32, .b33, .b41, .b43, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.v9 {
+//     .b11, .b12, .b13, .b21, .b23, .b31, .b32, .b33, .b43, .b51, .b52, .b53 {
+//       @include counter-display;
+//     }
+//   }
+//   &.vminus {
+//     .b31,.b32,.b33 {
+//       @include counter-display;
+//     }
+//   }
+//   &.vplus {
+//     .b21,.b22,.b23,.b31,.b33,.b41,.b42,.b43 {
+//       @include counter-display;
+//     }
+//   }
+//   &.vdot {
+//     .b52 {
+//       @include counter-display;
+//     }
+//   }
+
+// }

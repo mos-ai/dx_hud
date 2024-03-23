@@ -52,6 +52,9 @@ CreateThread(function()
 				SendMessage('setOxygen', false)
 				onSurface = true
 			end
+			local playerPed = GetPlayerPed(cache.playerId)
+			local playerCoords = GetEntityCoords(playerPed)
+			SendMessage('coords', playerCoords)
 		end
 		Wait(200)
 	end
