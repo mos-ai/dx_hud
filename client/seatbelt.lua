@@ -21,13 +21,13 @@ local function Seatbelt(status)
 		-- SendMessage('playSound', 'buckle')
 		SendMessage('setSeatbelt', true)
 		SetFlyThroughWindscreenParams(1000.0, 1000.0, 0.0, 0.0)
-		lib.disableControls:Add(75)
-		Buckled()
+		-- lib.disableControls:Add(75)
+		-- Buckled()
 	else
 		-- SendMessage('playSound', 'unbuckle')
 		SendMessage('setSeatbelt', false)
 		SetFlyThroughWindscreenParams(15.0, 20.0, 17.0, 2000.0)
-		lib.disableControls:Remove(75)
+		-- lib.disableControls:Remove(75)
 	end
 	isBuckled = status
 end
@@ -39,8 +39,11 @@ CreateThread(function()
 			local isPedUsingAnyVehicle = cache.vehicle and true or false
 			if isPedUsingAnyVehicle ~= inVehicle then
 				-- SendMessage('setSeatbelt', isPedUsingAnyVehicle)
-				if not isPedUsingAnyVehicle and isBuckled then isBuckled = false end
+				if not isPedUsingAnyVehicle and isBuckled then 
+					Seatbelt(false)
+				end
 				inVehicle = isPedUsingAnyVehicle
+
 			end
 		end
 		Wait(1000)
